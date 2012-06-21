@@ -27,12 +27,14 @@ get_header();
 #trials-center-well {
 	width: 400px;
 	float: left;
+	margin
 }
 #content .trials-center-story {
 	border-bottom: 3px solid #CCC;
 }
 #content .trials-center-story {
-	padding: 10px 0;
+	padding: 0;
+	padding-bottom: 20px;
 	margin: 0;
 	font-size: 25px;
 	line-height: 27px;
@@ -99,7 +101,7 @@ get_header();
 					    live: false,
 					    behavior: 'all'
 					  }
-					}).render().setUser('dailyemerald').start();
+					}).render().setUser('odesports').start();
 					</script>
 				</div><!-- #lead-well -->
 	

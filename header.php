@@ -33,40 +33,27 @@
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		
-		<div id="top-banner-ad-wrapper" style="padding:0;border-bottom:0;">
+		<div id="top-banner-ad-wrapper">
 			<!-- Main Banner Ad -->
 			<div id="top-banner-ad">
 				<?php adtag_banner(); ?>	
 			</div>
 		</div>
 		
-		<div id="header-bar">
-			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'header' ) ); ?>
-		</div>
-		
 		<div id="masthead">
-			<div id="branding" role="banner" class="float-left">
-				<div id="site-title">
-					<span><a href="<?php echo home_url(); ?>"><img height="80px" width="381px" src="<?php bloginfo('template_directory'); ?>/images/emerald-flag.png"></img></a></span>
-				</div>
-				<div id="branding-right">
-					
-				</div>
-			</div><!-- #branding -->
-
-			<div id="access" role="navigation">
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
-				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-				
-				<?php if ( !is_search() ): ?>
-					<div class="site-search"><?php get_search_form(); ?></div>
-				<?php endif; ?>
-			</div><!-- #access -->
-			
-			<div style="clear:both"></div>
-					
+			<div id="flag">
+				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/emeraldtrials.png"></img></a></span>
+			</div>
 		</div><!-- #masthead -->
+		
+		<div id="access" role="navigation">
+			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+
+			<?php if ( !is_search() ): ?>
+				<div class="site-search"><?php get_search_form(); ?></div>
+			<?php endif; ?>
+		</div><!-- #access -->	
+					
 
 	</div><!-- #header -->
 

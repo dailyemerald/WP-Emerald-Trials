@@ -18,6 +18,11 @@ body ul {
     margin-left: 14px;
 }
 
+#flag {
+  margin: 0 auto;
+  width: 370px;
+}
+
 li.widget {
 	list-style: none;
 }
@@ -76,9 +81,9 @@ body.single .archive-image .archive-caption {
 }
 
 #wrapper {
-	border-left: 1px solid #E7E7E7;
-	border-right: 1px solid #E7E7E7;
-	margin-top: 0;
+	/*border-left: 1px solid #E7E7E7;
+	border-right: 1px solid #E7E7E7;*/
+	margin: 0 auto;
 	padding: 0;
 	width: 990px;
 }
@@ -133,6 +138,7 @@ body.single .archive-image .archive-caption {
 }
 
 #main {
+
 	margin: 0;
 	width: 990px;
 	padding: 0;
@@ -241,26 +247,16 @@ body.single .archive-image .archive-caption {
 }
 
 #site-title {
-	width:  100px;
-	float: left;	
-	margin-left: 20px;
+
 }
 
 #site-title span img {
-	/*width:  80px;	*/
 	border: 0;	
 }
 
 #branding {
-	width: 450px;
-	margin-top: 10px; 
-	margin-bottom: -7px;
 }
-#access {
-	width: 990px;
-	/*margin-left:  -5px;*/
-	box-shadow: 0 4px 5px #8D8D8D;
-}
+
 #container {
 	width: 670px; 
 	margin-left: 0px; 
@@ -410,16 +406,15 @@ body.single .archive-image .archive-caption {
 }
 
 #top-banner-ad-wrapper {
-	border-bottom: 1px solid #E7E7E7;
-	padding: 10px;
-	margin: 0;
+  padding:0;	
+  margin: 0;
 }
 
 
 #top-banner-ad {
-	width: 728px;
-	height: 90px;
-	margin: 0 auto;
+	/*width: 728px;
+	height: 90px;*/
+	margin: 0;
 	padding: 0;
 }
 

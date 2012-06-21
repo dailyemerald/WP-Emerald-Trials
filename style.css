@@ -161,7 +161,7 @@ code {
 div.menu,
 #colophon,
 #branding,
-#main,
+#,
 #wrapper {
 	margin: 0 auto;
 	width: 940px;
@@ -337,11 +337,6 @@ a:hover {
 	padding: 30px 0 0 0;
 }
 #site-title {
-	float: left;
-	font-size: 30px;
-	line-height: 36px;
-	margin: 0 0 18px 0;
-	width: 700px;
 }
 #site-title a {
 	color: #000;
@@ -356,12 +351,16 @@ a:hover {
 	width: 220px;
 }
 
+#masthead {
+ 
+}
+
 /* This is the custom header image */
 #branding img {
 	border-top: 4px solid #000;
 	border-bottom: 1px solid #000;
 	display: block;
-	float: left;
+
 }
 
 
@@ -369,15 +368,17 @@ a:hover {
 -------------------------------------------------------------- */
 
 #access {
-	background: #000;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+	background: #FFF;
 	display: block;
 	float: left;
 	margin: 0 auto;
-	width: 940px;
+	width: 990px;
 }
 #access .menu-header,
 div.menu {
-	font-size: 13px;
+	font-size: 14px;
 	margin-left: 12px;
 	width: 928px;
 }
@@ -392,10 +393,11 @@ div.menu li {
 	position: relative;
 }
 #access a {
-	color: #aaa;
+	color: #333;
 	display: block;
 	line-height: 38px;
 	padding: 0 10px;
+	font-weight: bold;
 	text-decoration: none;
 }
 #access ul ul {
@@ -426,8 +428,8 @@ div.menu li {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-	background: #333;
-	color: #fff;
+	background: #FFF;
+	color: #333;
 }
 #access ul li:hover > ul {
 	display: block;
@@ -436,14 +438,15 @@ div.menu li {
 #access ul li.current-menu-ancestor > a,
 #access ul li.current-menu-item > a,
 #access ul li.current-menu-parent > a {
-	color: #fff;
+	color: #333;
+
 }
 * html #access ul li.current_page_item a,
 * html #access ul li.current-menu-ancestor a,
 * html #access ul li.current-menu-item a,
 * html #access ul li.current-menu-parent a,
 * html #access ul li a:hover {
-	color: #fff;
+	color: #333;
 }
 
 
