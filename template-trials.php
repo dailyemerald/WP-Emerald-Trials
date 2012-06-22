@@ -122,6 +122,13 @@ get_header();
 						the_post_thumbnail(array(400,400));
 						echo '</a>';
 						
+						$embedHtmlFields = get_post_custom_values("embed_html");
+						foreach ( $embedHtmlFields as $key => $value ) {
+						    echo '<div style="padding-top:10px;">';
+						    echo $value;
+						    echo '</div>'; 
+						}
+						
 						echo '</div>';
 					endwhile;
 
