@@ -408,12 +408,13 @@ body.single .archive-image .archive-caption {
 #top-banner-ad-wrapper {
   padding:0;	
   margin: 0;
+  margin-top: -10px;
 }
 
 
 #top-banner-ad {
 	/*width: 728px;
-	height: 90px;*/
+	height: 100px;*/
 	margin: 0;
 	padding: 0;
 }

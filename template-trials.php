@@ -27,14 +27,13 @@ get_header();
 #trials-center-well {
 	width: 400px;
 	float: left;
-	margin
+	margin-top: -10px;
 }
 #content .trials-center-story {
 	border-bottom: 3px solid #CCC;
 }
 #content .trials-center-story {
-	padding: 0;
-	padding-bottom: 20px;
+	padding: 10px 0px;
 	margin: 0;
 	font-size: 25px;
 	line-height: 27px;
@@ -119,8 +118,7 @@ get_header();
 						the_permalink();
 						echo '">';
 						the_title();
-					
-						
+							
 						the_post_thumbnail(array(400,400));
 						echo '</a>';
 						
