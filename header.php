@@ -22,6 +22,7 @@
 <body <?php body_class(); ?>>
 
 <div id="fb-root"></div>
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -30,20 +31,43 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		
 		<div id="top-banner-ad-wrapper">
 			<!-- Main Banner Ad -->
-			<div id="top-banner-ad">
+			<div id="top-banner-ad" style="float: left">
 				<?php adtag_banner(); ?>	
 			</div>
+			<div id="house-ad" style="float:left;margin-top:15px;width:200px;margin-left:30px;">
+				<a href="https://bitly.com/eugtrials"><img src="<?php bloginfo('template_directory'); ?>/images/App.png"></img></a>
+			</div>
+			<div style="clear:both" />
 		</div>
 		
-		<div id="masthead">
+		<div id="masthead" style="margin-top: -18px;">
 			<div id="flag">
 				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/emeraldtrials.png"></img></a></span>
 			</div>
+			
+			<div id="socialmedia" style="margin-top:-38px; padding-bottom: 10px;">
+				
+				<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/follow_button.1340179658.html#_=1340391604138&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=dailyemerald&amp;show_count=false&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button" style="width: 139px; height: 20px; " title="Twitter Follow Button"></iframe>
+
+				<div style="margin-top: -2px;" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="http://facebook.com/dailyemerald" data-send="false" data-layout="button_count" data-width="90" data-show-faces="true">
+					<span style="height: 20px; width: 90px; ">
+						<iframe id="f3b8134084" name="f2bf3c9e8c" scrolling="no" style="overflow: hidden; margin-top:-3px; height: 20px; width: 90px; border: none; " title="Like this content on Facebook." class="fb_ltr " src="http://www.facebook.com/plugins/like.php?api_key=197312536953017&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D8%23cb%3Df1c76cbf4%26origin%3Dhttp%253A%252F%252Ftesting.dailyemerald.com%252Ff209cb793%26domain%3Dtesting.dailyemerald.com%26relation%3Dparent.parent&amp;extended_social_context=false&amp;href=http%3A%2F%2Ffacebook.com%2Fdailyemerald&amp;layout=button_count&amp;locale=en_US&amp;node_type=link&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=90"></iframe>
+					</span>
+				</div>
+				
+				</div><!--social media -->
+
+		
+			
+
+			
 		</div><!-- #masthead -->
 		
 		<div id="access" role="navigation">
