@@ -135,7 +135,7 @@ get_header();
 						echo '</div>';
 					endwhile;
 					
-				    echo '<div id="footer-paginate" style="position:relative; width:400px; font-size: 15px; font-weight:bold; margin-top:10px;">';
+				    echo '<div id="footer-paginate" style="position:relative; width:400px; height:50px; font-size: 15px; font-weight:bold; margin-top:10px;">';
 				
 					$currentPage = get_query_var( 'page' );
 				
