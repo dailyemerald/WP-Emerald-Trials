@@ -52,28 +52,6 @@ get_header();
 
 				<div id="trials-lead-well">
 					
-					<?php	
-						// The Query
-						$the_query = new WP_Query('num_posts=30');
-
-						// The Loop
-						while ( $the_query->have_posts() ) : $the_query->the_post();
-							echo '<div class="trials-lead-story">';
-
-							echo '<a href="';
-							the_permalink();
-							echo '">';
-							the_title();
-							echo '</a>';
-
-							echo '</div>';
-						endwhile;
-
-						// Reset Post Data
-						wp_reset_postdata();
-					?>
-					
-					
 					<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 					<script>
 					new TWTR.Widget({
@@ -95,20 +73,45 @@ get_header();
 					    }
 					  },
 					  features: {
-					    scrollbar: false,
+					    scrollbar: true,
 					    loop: false,
-					    live: false,
+					    live: true,
 					    behavior: 'all'
 					  }
 					}).render().setUser('odesports').start();
 					</script>
+					
+					<?php	
+						// The Query
+
+						$leadQuery = new WP_Query('showposts=25');
+
+						// The Loop
+						while ( $leadQuery->have_posts() ) : $leadQuery->the_post();
+							echo '<div class="trials-lead-story">';
+
+							echo '<a href="';
+							the_permalink();
+							echo '">';
+							the_title();
+							echo '</a>';
+
+							echo '</div>';
+						endwhile;
+
+						// Reset Post Data
+						wp_reset_postdata();
+					?>
+					
+					
+				
 				</div><!-- #lead-well -->
 	
 				
 				<div id="trials-center-well">
 				<?php	
 					// The Query
-					$the_query = new WP_Query('category_name=2012-olympic-trials');
+					$the_query = new WP_Query('category_name=2012-olympic-trials&posts_per_page=20&paged='.get_query_var( 'page' ));
 
 					// The Loop
 					while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -131,6 +134,20 @@ get_header();
 						
 						echo '</div>';
 					endwhile;
+					
+				    echo '<div id="footer-paginate" style="position:relative; width:400px; font-size: 15px; font-weight:bold; margin-top:10px;">';
+				
+					$currentPage = get_query_var( 'page' );
+				
+					if ($currentPage > 0) {
+					  $newerPage = $currentPage - 1;	
+					  echo '<a style="position:absolute; left:0;" href="?page='.$newerPage.'">« Newer stories</a>';
+					}
+					
+					$olderPage = $currentPage + 1;
+					echo '<a style="position:absolute; right:0;" href="?page='.$olderPage.'">Older stories »</a>';
+					
+					echo "</div>";
 
 					// Reset Post Data
 					wp_reset_postdata();
