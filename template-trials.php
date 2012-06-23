@@ -60,7 +60,7 @@ get_header();
 					  rpp: 4,
 					  interval: 30000,
 					  width: 240,
-					  height: 400,
+					  height: 300,
 					  theme: {
 					    shell: {
 					      background: '#ffffff',
@@ -139,7 +139,7 @@ get_header();
 				
 					$currentPage = get_query_var( 'page' );
 				
-					if ($currentPage > 0) {
+					if ($currentPage > 1) {
 					  $newerPage = $currentPage - 1;	
 					  echo '<a style="position:absolute; left:0;" href="?page='.$newerPage.'">« Newer stories</a>';
 					}
