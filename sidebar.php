@@ -7,7 +7,7 @@
 	</a>
 	</div>
 	
-<ul class="xoxo">
+<ul class="xoxo" style="padding:20px;">
 
 <?php if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
 
