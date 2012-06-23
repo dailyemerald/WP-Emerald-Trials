@@ -143,8 +143,11 @@ get_header();
 					  $newerPage = $currentPage - 1;	
 					  echo '<a style="position:absolute; left:0;" href="?page='.$newerPage.'">« Newer stories</a>';
 					}
-					
-					$olderPage = $currentPage + 1;
+					if (is_int($currentPage)) {
+						$olderPage = $currentPage + 1;
+					} else {
+						$olderPage = 2;
+					} 
 					echo '<a style="position:absolute; right:0;" href="?page='.$olderPage.'">Older stories »</a>';
 					
 					echo "</div>";
