@@ -60,7 +60,7 @@ get_header();
 					  rpp: 4,
 					  interval: 30000,
 					  width: 240,
-					  height: 1000,
+					  height: 400,
 					  theme: {
 					    shell: {
 					      background: '#ffffff',
