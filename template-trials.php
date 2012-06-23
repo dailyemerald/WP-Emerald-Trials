@@ -137,17 +137,16 @@ get_header();
 					
 				    echo '<div id="footer-paginate" style="position:relative; width:400px; height:50px; font-size: 15px; font-weight:bold; margin-top:10px;">';
 				
-					$currentPage = get_query_var( 'page' );
+					$currentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				
 					if ($currentPage > 1) {
 					  $newerPage = $currentPage - 1;	
 					  echo '<a style="position:absolute; left:0;" href="?page='.$newerPage.'">« Newer stories</a>';
 					}
-					if (is_int($currentPage)) {
-						$olderPage = $currentPage + 1;
-					} else {
-						$olderPage = 2;
-					} 
+
+					$olderPage = $currentPage + 1;
+
+					echo "<!-- currentPage:".$currentPage.": -->";
 					echo '<a style="position:absolute; right:0;" href="?page='.$olderPage.'">Older stories »</a>';
 					
 					echo "</div>";
