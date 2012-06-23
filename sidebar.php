@@ -1,7 +1,13 @@
 <div id="primary" class="widget-area" role="complementary">
-	<ul class="xoxo">
 
-	<a href="http://bit.ly/MoTInH"><img style="margin-left: 40px; margin-top: -27px;" src="<?php bloginfo('template_directory'); ?>/images/FanPhotos.png"></img></a>
+	<div style="margin-left: 20px; border-bottom:2px solid #EEE;">
+	<a href="http://bit.ly/MoTInH">
+	    <img src="http://distilleryimage6.s3.amazonaws.com/581844b0bd7211e180c9123138016265_6.jpg"></img>
+		<img style="margin-left: 35px; margin-top: 0px;" src="<?php bloginfo('template_directory'); ?>/images/FanPhotos.png"></img>
+	</a>
+	</div>
+	
+<ul class="xoxo">
 
 <?php if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
 
