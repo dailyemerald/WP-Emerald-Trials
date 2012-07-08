@@ -41,15 +41,13 @@
 			<div id="top-banner-ad" style="float: left">
 				<?php adtag_banner(); ?>	
 			</div>
-			<div id="house-ad" style="float:left;margin-top:15px;width:200px;margin-left:30px;">
-				<a href="https://bitly.com/eugtrials"><img src="<?php bloginfo('template_directory'); ?>/images/App.png"></img></a>
-			</div>
+			
 			<div style="clear:both" />
 		</div>
 		
 		<div id="masthead" style="margin-top: -18px;">
 			<div id="flag">
-				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/emeraldtrials.png"></img></a></span>
+				<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/emerald.png"></img></a></span>
 			</div>
 			
 			<div id="socialmedia" style="margin-top:-38px; padding-bottom: 10px;">

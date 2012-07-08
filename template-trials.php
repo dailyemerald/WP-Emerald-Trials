@@ -111,7 +111,7 @@ get_header();
 				<div id="trials-center-well">
 				<?php	
 					// The Query
-					$the_query = new WP_Query('category_name=2012-olympic-trials&posts_per_page=20&paged='.get_query_var( 'page' ));
+					$the_query = new WP_Query('category_name=editors-picks&posts_per_page=20&paged='.get_query_var( 'page' ));
 
 					// The Loop
 					while ( $the_query->have_posts() ) : $the_query->the_post();
