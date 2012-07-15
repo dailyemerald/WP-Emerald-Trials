@@ -15,9 +15,24 @@ if (in_category('multimedia')) {
 } else {	
 	get_sidebar(); 
 }	
+?>
 
+<?php
+
+?>
+
+<script type="text/javascript">
+  mixpanel.track("Viewed Post", {
+	         "Title": "<?php single_post_title(); ?>",
+            "Author": "<?php the_author(); ?>",
+          "Category": "<?php $category = get_the_category(); echo $category[0]->cat_name; ?>",
+              "Date": "<?php the_date( l ); ?>",
+     "Comment Count": "<?php comments_number(); ?>"
+  });
+</script>
+
+<?php 
 get_footer();
-
 ?>
 
 

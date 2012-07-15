@@ -43,7 +43,12 @@
 
 </div><!-- #wrapper -->
 
-<script type='text/javascript' src='http://s.ppjol.net/pp.js'>{'zone':'E5bSgmqIao0HOyZaNNBBih', 'mode':'meter', 'debug':0}</script>
+<script type='text/javascript' src='http://s.ppjol.net/pp.js'>
+  {'zone':'E5bSgmqIao0HOyZaNNBBih', 'mode':'meter', 'debug':0}
+</script>
+
+<a href="https://mixpanel.com/f/partner"><img src="https://mixpanel.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which

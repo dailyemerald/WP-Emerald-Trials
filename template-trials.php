@@ -135,4 +135,10 @@ get_header();
 			
 		</div><!-- #container -->
 
+		<script type="text/javascript">
+		  mixpanel.track("Viewed Homepage",
+		    {"Title":"Homepage (Trials Template)",
+		     "Date":"<?php the_date( l ); ?>"});
+		</script>
+
 <?php get_footer(); ?>
