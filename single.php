@@ -1,5 +1,14 @@
 <?php get_header(); ?>
 
+<script type="text/javascript">
+  mixpanel.track("Viewed Post", {
+	         "Title": "<?php single_post_title(); ?>",
+            "Author": "<?php the_author(); ?>",
+          "Category": "<?php $category = get_the_category(); echo $category[0]->cat_name; ?>",
+              "Date": "<?php the_date( l ); ?>"
+  });
+</script>
+
 <div id="container">
 	<div id="content" role="main">
 
@@ -20,16 +29,6 @@ if (in_category('multimedia')) {
 <?php
 
 ?>
-
-<script type="text/javascript">
-  mixpanel.track("Viewed Post", {
-	         "Title": "<?php single_post_title(); ?>",
-            "Author": "<?php the_author(); ?>",
-          "Category": "<?php $category = get_the_category(); echo $category[0]->cat_name; ?>",
-              "Date": "<?php the_date( l ); ?>",
-     "Comment Count": "<?php comments_number(); ?>"
-  });
-</script>
 
 <?php 
 get_footer();
