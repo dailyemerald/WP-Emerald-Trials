@@ -22,7 +22,8 @@ if (in_category('multimedia')) {
 	         "Title": "<?php single_post_title(); ?>",
             "Author": "<?php the_author(); ?>",
           "Category": "<?php $category = get_the_category(); echo $category[0]->cat_name; ?>",
-              "Date": "<?php the_date( l ); ?>"
+              "Date": "<?php the_date( l ); ?>",
+		 "HourOfDay": "<?php the_date( H ); ?>"
   });
 </script>
 
