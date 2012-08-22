@@ -146,23 +146,6 @@ function ode_head_fb_open_graph() {
 	}	
 }
 
-function ode_head_adgear() {
-	echo <<<EOD
-
-<!-- new adgear header tracking code -->	
-<script type="text/javascript"> 
-var adGearSeg_adPaperID="859"; //859
-var adGearSeg_Section="Home"; 
-var papername="Daily Emerald"; //Daily Emerald
-var anCPCd = "WP";
-var anCPPipe = "3";
-var anCPPaperUrl = location.host;
-</script>
-
-EOD;
-}
-
-
 /**
  * Generate the <title> tag for the header
  */
@@ -185,103 +168,48 @@ function ode_head_title_description() {
 
 }
 
-/**
- * College Publisher ad snippets
- */
-
-
-function CP_1st_300x250($atts, $content = null) {
-	return <<<EOD
-<script type="text/javascript"> 
-	document.writeln('<iframe id="adframe" src="http://admanager.collegepublisher.com/003F3B/adscript/ad_source_cmn.html?' + adGearSeg_adPaperID + '&' + '12' + '&' + adGearSeg_Section + '&' + papername + '" width="300" height="250" marginwidth="0" frameborder="0" vspace="0" hspace="0" scrolling="no" seamless></iframe>');
-</script>
-EOD;
-}
-add_shortcode("CP_1st_300x250", "CP_1st_300x250");
-
-function CP_2nd_300x250($atts, $content = null) {
-	return <<<EOD
-<script type="text/javascript"> 
-	document.writeln('<iframe id="adframe" src="http://admanager.collegepublisher.com/003F3B/adscript/ad_source_cmn.html?' + adGearSeg_adPaperID + '&' + '22' + '&' + adGearSeg_Section + '&' + papername + '" width="300" height="250" marginwidth="0" frameborder="0" vspace="0" hspace="0" scrolling="no" seamless></iframe>');
-</script>
-EOD;
-}
-add_shortcode("CP_2nd_300x250", "CP_2nd_300x250");
-
-function CP_160x600($atts, $content = null) {
-	return <<<EOD
-<script type="text/javascript"> 
-document.writeln('<iframe id="adframe" src="http://admanager.collegepublisher.com/003F3B/adscript/ad_source_cmn.html?' + adGearSeg_adPaperID + '&' + '21' + '&' + adGearSeg_Section + '&' + papername + '" width="160" height="600" marginwidth="0" frameborder="0" vspace="0" hspace="0" scrolling="no" seamless></iframe>');
-</script>
-EOD;
-}
-add_shortcode("CP_160x600", "CP_160x600");
-
-function CP_468x60($atts, $content = null) {
-	return <<<EOD
-<script type="text/javascript"> 
-document.writeln('<iframe id="adframe" src="http://admanager.collegepublisher.com/003F3B/adscript/ad_source_cmn.html?' + adGearSeg_adPaperID + '&' + '23' + '&' + adGearSeg_Section + '&' + papername + '" width="468" height="60" marginwidth="0" frameborder="0" vspace="0" hspace="0" scrolling="no" seamless></iframe>');
-</script>
-EOD;
-}
-add_shortcode("CP_468x60", "CP_468x60");
-
-function CP_trackingFooter() {
-echo <<<EOD
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-18994242-2");
-pageTracker._setCustomVar(1, "pu", anCPPaperUrl, 3);
-pageTracker._setCustomVar(2, "pi", adGearSeg_adPaperID, 3);
-pageTracker._setCustomVar(3, "pn", papername, 3);
-pageTracker._setCustomVar(4, "ppp", anCPPipe, 3);
-pageTracker._setCustomVar(5, "pcp", anCPCd, 3);
-pageTracker._trackPageview();
-} catch(err) {}
-</script>
-EOD;
-}
-
 function adtag_banner() {
-	// old ad tag
-	//echo '<!-- CMN 728x90 AD tag--><script language="javascript">showNetworkBanner(11);</script>';
-	
-	// new ad tag
-	echo <<<EOD
-
-<!-- CMN 728x90 AD tag-->
-<script type="text/javascript"> 
-	document.writeln('<iframe id="adframe" src="http://admanager.collegepublisher.com/003F3B/adscript/ad_source_cmn.html?' + adGearSeg_adPaperID + '&' + '11' + '&' + adGearSeg_Section + '&' + papername + '" width="728" height="90" marginwidth="0" frameborder="0" vspace="0" hspace="0" scrolling="no" seamless></iframe>');
-</script>
-
-EOD;
+	echo "<!-- Leaderboard -->
+	<div id='div-gpt-ad-1345664745877-2' style='width:728px; height:90px;'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1345664745877-2'); });
+	</script>
+	</div>";
+	return true;
 }
 
-function adtag_subbanner() {
-	echo '<!-- CMN 468x60 College AD tag--><script language="Javascript">showNetworkBanner(23);</script>';
-}
-
-function adtag_sidebar_top() {
-	echo '<!-- CMN 300x250 ATF AD tag--><script language="Javascript">showNetworkBanner(12);</script>';
-}
-
-function adtag_sidebar_bottom() {
-	echo '<!-- CMN 300x250 College AD tag--><script language="Javascript">showNetworkBanner(22);</script>';
-}
-
-function adtag_sidebar_tall() {
-	echo '<!-- CMN 160x600 College AD tag--><script language="Javascript">showNetworkBanner(21);</script>';
-}
-
-function adgear_shortcode($atts, $content = null) {
+function dfp_shortcode($atts, $content = null) {
 	extract(shortcode_atts(array(
 		"tag" => ""
 	), $atts));	
-	return '<!-- adgear tag --><script language="javascript">showNetworkBanner('.$tag.');</script>';
+	
+	$tag_300_1 = "<!-- 300_2 -->
+	<div id='div-gpt-ad-1345664745877-0' style='width:300px; height:250px;'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1345664745877-0'); });
+	</script>
+	</div>";
+	
+	$tag_300_2 = "<!-- 300_2 -->
+	<div id='div-gpt-ad-1345664745877-1' style='width:300px; height:250px;'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1345664745877-1'); });
+	</script>
+	</div>";
+	
+	$tag_leaderboard = "<!-- Leaderboard -->
+	<div id='div-gpt-ad-1345664745877-2' style='width:728px; height:90px;'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1345664745877-2'); });
+	</script>
+	</div>";
+	
+	if ($tag == "300_1") {
+		return $tag_300_1;
+	} else if ($tag == "300_2") {
+		return $tag_300_2;
+	} else if ($tag == "leaderboard") {
+		return $tag_leaderboard;
+	}
 }
-add_shortcode("adgear", "adgear_shortcode");
+add_shortcode("dfp", "dfp_shortcode");
